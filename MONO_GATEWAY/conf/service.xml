@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<panworldnet>
+	<entity class="com.pgmate.gateway.server.conf.ServerConfigBean" name="MONO_GATEWAY">
+		<serverPort>19999</serverPort>
+		<serverTimeout>60000</serverTimeout>
+		<pwnServerIp>app.monohitech.com</pwnServerIp>
+		<pwnServerPort>20000</pwnServerPort>
+		<pwnTimeout>55000</pwnTimeout>
+	</entity>
+</panworldnet>

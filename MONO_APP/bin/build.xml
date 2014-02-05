@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../MONO_APP/" default="compile" name="PG">
+
+  <!-- Project Default Directory -->
+	<property name="src.dir" location="${basedir}\src"/>
+	<property name="classes.dir" location="${basedir}\war\WEB-INF\classes"/>
+	<property name="property.dir" location="${src.dir}\com\pgmate\resource"/>
+	<property name="log.dir" location="${basedir}\war\WEB-INF"/>
+	<property name="lib.dir" location="${basedir}\war\WEB-INF\lib"/>
+	<property name="lib2.dir" location="D:\resin\lib"/>
+	
+	<!-- Project Default Classpath -->
+	<path id="project.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${lib2.dir}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+  <echo message ="#### SET PROJECT CLASSPATH ####"/>
+
+  <!-- Make Directory -->
+  <target name="init">
+  	<tstamp>
+       <format property="time" pattern="yyyy-MM-dd hh:mm" />
+    </tstamp>
+  		<mkdir dir="${basedir}\war\upload"/>
+		<mkdir dir="${classes.dir}"/>
+  		<mkdir dir="${log.dir}\logs"/>
+		<mkdir dir="${log.dir}\logs\day"/>
+  		<mkdir dir="${log.dir}\logs\sql"/>
+  		<mkdir dir="${log.dir}\logs\access"/>
+  		<mkdir dir="${log.dir}\logs\pay"/>
+  </target>
+
+  <echo message ="#### COMPILE COMPLETE ####"/>
+
+    <target name="compile" depends="init">
+    <javac destdir="${classes.dir}" srcdir="${src.dir}" optimize="true" debug="true" deprecation="true" encoding="UTF-8">
+      <classpath refid="project.classpath"/>
+    </javac>
+    <copy todir="${classes.dir}">
+    	<fileset dir="${property.dir}" includes="**/*.properties"/>
+    </copy>
+	 <jar destfile="${lib.dir}\pg-ddl-1.0.jar"
+		       basedir="${classes.dir}" 
+	       includes="com/pgmate/model/**,com/pgmate/payment/util/**">
+		      <manifest>
+		        <attribute name="Built-By" value="pgmate.com"/>
+		        <attribute name="Jar-Title" value="PG DDL"/>
+		        <attribute name="Jar-Version" value="1.0.0"/>
+		        <attribute name="Jar-Vendor" value="pgmate co.,ltd"/>
+		      </manifest>
+		 </jar>
+    
+  </target>
+
+  <echo message ="#### START COMPILE  ####"/>
+
+</project>

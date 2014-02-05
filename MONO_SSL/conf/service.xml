@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<pgmate>
+	<entity class="com.pgmate.server.conf.ServerConfigBean" name="MONO_SSL">
+		<serverPort>9999</serverPort>
+		<serverTimeout>60000</serverTimeout>
+		<ackServer>112.175.48.40</ackServer>
+		<keyStore>pgmatekeystore</keyStore>
+		<keyStorePasswd>pgmate123456</keyStorePasswd>
+	</entity>
+</pgmate>

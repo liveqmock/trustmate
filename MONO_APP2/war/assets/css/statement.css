@@ -1,0 +1,220 @@
+@charset "UTF-8"; 
+
+#no_display {display:none;}
+/*로고 나오게 하기*/
+#logo {display:block;}
+/*사이트 주소 프린트 되게 하기*/
+a:after {content: " (" attr(href) ") ";}
+/*모든 font 검정색으로*/
+*{color: #000000 !important;}
+
+INPUT, TEXTAREA, SELECT {
+        font-family:tahoma; FONT-SIZE: 12px; COLOR: #000000; border: 1px solid #6B9EE7;}
+
+table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+.font
+	{color:windowtext;
+	font-size:6.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;}
+
+body,td {
+	color:#000000;
+	font-family:tahoma;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+img{border:0}
+
+a:link {color:#000033; text-decoration:none; font-weight:bold;}
+a:visited {color:#000033; text-decoration:none; font-weight:bold;}
+a:active {color:#000033; text-decoration:none; font-weight:bold;}
+a:hover {color:#0f9eda; text-decoration:none; font-weight:bold;}
+
+.outline{border:1 solid #C0C0C0;}
+.td_title{font-size:9pt;text-align:left;vertical-align:middle;font-weight:600;font-family:tahoma;}
+.td_emphasis{font-size:8pt;text-align:center;vertical-align:middle;font-weight:700;font-family:tahoma;background-color: #99ccff}
+.td_noemp_num{font-size:8pt;text-align:center;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_sub_title1{font-size:8pt;text-align:left;padding:0 0 0 10px;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_emphasis1{font-size:8pt;text-align:left;vertical-align:middle;font-weight:700;font-family:tahoma;background-color: #99ccff}
+.td_noemp_num_1{font-size:7pt;text-align:left;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_sub_title1_1{font-size:7pt;text-align:left;padding:0 0 0 0;vertical-align:middle;font-weight:400;font-family:tahoma;}
+
+.td_sub_title1_emp{background-color: #99ccff;font-size:8pt;text-align:left;padding:0 0 0 10px;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_sub_title2_left{text-align:left;font-size:8pt;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_sub_title2_right{text-align:right;font-size:8pt;vertical-align:middle;font-weight:400;font-family:tahoma;}
+.td_sub_title3_left{text-align:left;font-size:8pt;vertical-align:middle;font-weight:700;font-family:tahoma;}
+.td_sub_title3_right{text-align:right;font-size:8pt;vertical-align:middle;font-weight:700;font-family:tahoma;}
+.td_sub_title3_emp_right{background-color: #99ccff;text-align:right;font-size:8pt;vertical-align:middle;font-weight:700;font-family:tahoma;}
+.td_sub_title3_emp_left{background-color: #99ccff;text-align:left;font-size:8pt;vertical-align:middle;font-weight:700;font-family:tahoma;}
+table.reference
+{
+border:1px solid #939393;
+border-collapse:collapse;
+}
+
+table.reference th
+{
+background-color:#e5eecc;
+border:1px dotted #0066CC;
+padding:3px;
+vertical-align:top;
+}
+
+table.reference td 
+{
+border:1px solid #939393;
+padding:3px;
+vertical-align:top;
+}
+.top_left_addr{
+	color:#333333;
+	font-size:9pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	padding-left:8px;
+	mso-char-indent-count:1;
+}
+
+.top_left_addr2
+	{color:#333333;
+	font-size:8pt;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	padding-left:8px;
+	mso-char-indent-count:1;}	
+.top_right_addr
+	{padding:0px;
+	mso-ignore:padding;
+	color:#333333;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.top_right_addr2
+	{padding:0px;
+	mso-ignore:padding;
+	color:#333333;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"HGPｺﾞｼｯｸM";
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	letter-spacing:3px;
+	}
+.btitle11
+	{padding:0px;
+	mso-ignore:padding;
+	color:#333333;
+	font-size:11.0pt;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.btitle9
+	{padding:0px;
+	mso-ignore:padding;
+	color:#333333;
+	font-size:9.0pt;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}		
+	
+.t02 {color:#333333;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	padding-left:18px;
+	mso-char-indent-count:1;}	
+.xl14517227
+	{color:#333333;
+	font-size:9.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:"yyyy\0022年\0022mm\0022月\0022dd\0022日\0022\;\@";
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	padding-left:28px;
+	mso-char-indent-count:2;}	
+.invoice
+	{color:#333333;
+	font-size:18pt;
+	font-style:normal;
+	font-weight:700;
+	word-spacing:10pt;
+	left-spacing:20pt;
+	text-decoration:none;
+	font-family:tahoma;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;
+	padding-left:14px;
+	mso-char-indent-count:1;}	
+input.btnClassic, button.btnClassic { overflow:visible; padding:3px 10px 5px 10px; border:1px solid #aaa8a6; background:#fff url(../images/btnclassic_bg_10x40_blue.png) 0% 100% repeat-x; color:#333; font-family:arial,verdana,tahoma,arial,helvetica,sans,sans-serif; font-size:12px; font-weight:bold; vertical-align:bottom; cursor:pointer; }

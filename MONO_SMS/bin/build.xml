@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../MONO_SMS" default="compile" name="trustnet">
+
+  <!-- Project Default Directory -->
+        <property name="src.dir" location="${basedir}\src"/>
+        <property name="lib.dir" location="${basedir}\lib"/>
+        <property name="classes.dir" location="${basedir}\classes"/>
+        <!-- Project Default Classpath -->
+        <path id="project.classpath">
+                <fileset dir="${lib.dir}">
+                        <include name="*.jar"/>
+                </fileset>
+        </path>
+
+  <echo message ="#### SET PROJECT CLASSPATH ####"/>
+
+  <!-- Make Directory -->
+  <target name="init">
+        <tstamp>
+       <format property="time" pattern="yyyy-MM-dd hh:mm" />
+    </tstamp>
+                <mkdir dir="${classes.dir}"/>
+                <mkdir dir="${basedir}\logs"/>
+                <mkdir dir="${basedir}\logs\day"/>
+  </target>
+
+  <echo message ="#### COMPILE COMPLETE ####"/>
+
+    <target name="compile" depends="init">
+    <javac destdir="${classes.dir}" srcdir="${src.dir}" optimize="true" debug="true" deprecation="true" encoding="UTF-8">
+      <classpath refid="project.classpath"/>
+    </javac>
+        <jar destfile="${lib.dir}\sms.jar"
+       basedir="${classes.dir}"
+       includes="**">
+      <manifest>
+        <attribute name="Built-By" value="Developer - GINAIDA"/>
+        <attribute name="Jar-Title" value="GINAIDA"/>
+        <attribute name="Jar-Version" value="1.1.0"/>
+        <attribute name="Jar-Vendor" value="TrustNet co.,ltd"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <echo message ="#### START COMPILE  ####"/>
+
+</project>

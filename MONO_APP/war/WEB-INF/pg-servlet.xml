@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       						http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+							http://www.springframework.org/schema/aop 
+							http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+							
+	 
+    <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass">
+        	<value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+        <property name="prefix">
+        	<value>/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+	
+	
+	<!-- SESSION 에 따른 페이지 이동  -->
+	<!--  bean id="sessionInterceptor" class="com.pgmate.ctl.sso.SessionInterceptor"/>
+	<bean id="sessionController" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="sessionInterceptor"/>
+			</list>
+		</property>
+		<property name="urlMap">
+			<map>
+				<entry key="/sso.do" value-ref="sso"/>
+				<entry key="/ssoout.do" value-ref="ssoout"/>
+				<entry key="/authentication.do" value-ref="authentication"/>
+			</map>
+		</property>
+	</bean-->
+	
+	<!-- Message Source -->
+ 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+  		<property name="basenames">
+  			<list>
+    			<value>message</value>
+    			<value>errors</value>
+   			</list>
+  		</property>
+ 	</bean>
+ 	
+ 	<bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+		<property name="order" value="0" />
+		<property name="alwaysUseFullPath" value="true" />
+	
+		
+	</bean>
+	<bean name="/sso.do" class="com.pgmate.ctl.sso.SSOController" scope="session"/>
+	<bean name="/ssoout.do" class="com.pgmate.ctl.sso.SSOOutController" scope="session"/>
+	<bean name="/authentication.do" class="com.pgmate.ctl.sso.AuthenticationController" scope="session"/>
+	
+	<!-- Merchant Bean -->
+	<bean name="/merchant/trnsctn.do" class="com.pgmate.ctl.merchant.MerchantTrnsctnController" scope="session"/>
+	<bean name="/merchant/report.do" class="com.pgmate.ctl.merchant.MerchantReportController" scope="session"/>
+	<bean name="/merchant/info.do" class="com.pgmate.ctl.merchant.MerchantInfoController" scope="session"/>
+	<bean name="/merchant/document.do" class="com.pgmate.ctl.merchant.MerchantDocumentController" scope="session"/>
+	
+	<!-- Group Bean -->
+	<bean name="/group/trnsctn.do" class="com.pgmate.ctl.group.GroupTrnsctnController" scope="session"/>
+	<bean name="/group/report.do" class="com.pgmate.ctl.group.GroupReportController" scope="session"/>
+	<bean name="/group/info.do" class="com.pgmate.ctl.group.GroupInfoController" scope="session"/>
+	
+	<!-- Member Bean -->
+	<bean name="/trnsctn.do" class="com.pgmate.ctl.member.TrnsctnController" scope="session"/>
+	<bean name="/member.do" class="com.pgmate.ctl.member.MemberController" scope="session"/>
+	<bean name="/notice.do" class="com.pgmate.ctl.member.NoticeController" scope="session"/>
+	<bean name="/report.do" class="com.pgmate.ctl.member.ReportController" scope="session"/>
+	<bean name="/bill.do" class="com.pgmate.ctl.member.BillController" scope="request"/>
+	<bean name="/manage.do" class="com.pgmate.ctl.member.ManageController" scope="request"/>
+	<!-- Payment -->
+	<bean name="/payment.do" class="com.pgmate.ctl.payment.PaymentController" scope="request"/>
+	<bean name="/adminPayment.do" class="com.pgmate.ctl.payment.AdminPaymentController" scope="request"/>
+	
+	<!-- File Upload -->
+	<bean name="/upload.do" class="com.pgmate.ctl.member.UploadController" scope="request"/>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+    	<property name="maxUploadSize">
+        	<value>30000000</value>
+    	</property>
+	</bean>
+	 
+</beans>

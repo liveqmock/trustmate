@@ -1,0 +1,62 @@
+/***
+Import fonts
+***/
+.header {
+	display: none;
+}
+
+.page-sidebar {
+	display: none;
+}
+
+.theme-panel {
+	display: none;
+}
+
+.hidden-print {
+	display: none;
+}
+
+.footer {
+	display: none;
+}
+
+.no-page-break {
+	page-break-after: avoid;
+}
+
+.page-container {
+	margin: 0px;
+	padding: 0px;
+}
+
+.page-content {
+	min-height: auto !important;
+}
+
+
+.table thead tr th{
+  font-size: 7px;
+  font-weight: 600;
+  text-align:center;
+}
+
+.table tbody td{
+  font-size: 7px;
+  text-align:center;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+padding: 3px;
+vertical-align: top;
+border-top: 1px solid #ddd;
+}
+
+.table-responsive{
+}
+
+/*Comment Section*/
+.commentlist .avatar {float:left; margin-right:10px;}
+.commentlist .children {margin-top:10px;}
+#comments {page-break-before: always;}
+

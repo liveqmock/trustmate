@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<trustnet>
+	<entity class="biz.trustnet.common.db.DBConfigBean" name="DEFAULT_DB">
+	    <dbType>ORACLE</dbType>
+	    <poolName>PW-APP</poolName>
+		<jdbcDriver>oracle.jdbc.driver.OracleDriver</jdbcDriver>
+		<dbUrl>jdbc:oracle:thin:@db2.pgmate.com:1521:KTT</dbUrl>
+		<dbUser>gsi</dbUser>
+		<dbPassword>dbpanworldnetcom</dbPassword>
+		<connection>10</connection>
+	</entity>
+	<entity class="biz.trustnet.common.mail.EMailConfigBean" name="EMAIL">
+     	<smtpHost>smtp.gmail.com</smtpHost>
+     	<smtpPort>465</smtpPort>
+  		<sendAuth>Y</sendAuth>
+  		<useSSL>Y</useSSL>
+  		<sslPort>465</sslPort>
+  		<mailCharSet>utf-8</mailCharSet>
+  		<defaultUser>ginaida@trustmate.net</defaultUser>
+  		<defaultPass>0121002</defaultPass>
+  		<defaultSender>ginaida@trustmate.net</defaultSender>
+  		<defaultHost>trustmate.net</defaultHost>
+ 	</entity>
+</trustnet>

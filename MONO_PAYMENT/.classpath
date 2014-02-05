@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/dcp_credit.jar"/>
+	<classpathentry kind="lib" path="lib/dcp_void.jar"/>
+	<classpathentry kind="lib" path="lib/jdbcpool-0.99.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="lib/pg-ddl-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/tn_common-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk14-134.jar"/>
+	<classpathentry kind="lib" path="lib/INICrypto_v3.1.7_signed.jar"/>
+	<classpathentry kind="lib" path="lib/INIpayJAVA.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="lib/tn_commspec.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

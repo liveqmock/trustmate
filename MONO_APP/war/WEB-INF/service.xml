@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<trustnet>
+	<entity class="biz.trustnet.common.db.DBConfigBean" name="DEFAULT_DB">
+	    <dbType>ORACLE</dbType>
+	    <poolName>PW-APP</poolName>
+		<jdbcDriver>oracle.jdbc.driver.OracleDriver</jdbcDriver>
+		<dbUrl>jdbc:oracle:thin:@112.175.48.37:1521:KTT</dbUrl>
+		<dbUser>gsi</dbUser>
+		<dbPassword>dbpanworldnetcom</dbPassword>
+		<connection>10</connection>
+	</entity>
+	<entity class="biz.trustnet.common.mail.EMailConfigBean" name="EMAIL">
+	    <smtpHost>smtp.gmail.com</smtpHost>
+	    <smtpPort>465</smtpPort>
+		<sendAuth>Y</sendAuth>
+		<useSSL>Y</useSSL>
+		<sslPort>465</sslPort>
+		<mailCharSet>utf-8</mailCharSet>
+		<defaultUser>ginaida@trustmate.net</defaultUser>
+		<defaultPass>0121002</defaultPass>
+		<defaultSender>ginaida@trustmate.net</defaultSender>
+		<defaultHost>trustmate.net</defaultHost>
+	</entity>
+    <entity class="com.pgmate.sms.conf.SMSConfigBean" name="SMS">
+		<serverIp>112.175.48.48</serverIp>
+		<serverPort>15000</serverPort>
+		<timeout>35000</timeout>
+		<sendTelNo>0234463730</sendTelNo>
+		<source>HANA</source>
+	</entity>
+	<entity class="com.pgmate.resource.SettleConfigBean" name="SETTLE">
+	    <line1>PAN WORLD NETWORK HK LIMITED</line1>
+	    <line2>〒 079903</line2>
+	    <line3>Unit 1305,  13/F, 8  Jordan Road, Yaumatei,</line3>
+	    <line4>Kowloon, Hong Kong </line4>
+	    <line5>TEL：+82-2-3446-3730　　FAX：+82-2-564-3730</line5>
+	</entity>
+	<entity class="com.pgmate.resource.CustomizingBean" name="CUSTOMER">
+	    <topLogo>/resources/images/top_logo.gif</topLogo>
+	    <copyRight>Copyright © 2012 PGMS. All Rights Reserved.</copyRight>
+	</entity>
+</trustnet>

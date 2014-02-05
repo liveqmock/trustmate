@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../MONO_DAEMON" default="compile" name="GSI">
+
+  <!-- Project Default Directory -->
+	<property name="src.dir" location="${basedir}\src"/>
+	<property name="lib.dir" location="${basedir}\lib"/>
+	<property name="classes.dir" location="${basedir}\classes"/>
+	<property name="properties.dir" location="${basedir}\conf"/>
+
+	<!-- Project Default Classpath -->
+	<path id="project.classpath">
+		<fileset dir="${lib.dir}">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+
+  <echo message ="#### SET PROJECT CLASSPATH ####"/>
+
+  <!-- Make Directory -->
+  <target name="init">
+  	<tstamp>
+       <format property="time" pattern="yyyy-MM-dd hh:mm" />
+    </tstamp>
+		<mkdir dir="${basedir}\classes"/>
+  		<mkdir dir="${basedir}\lib"/>
+  		<mkdir dir="${basedir}\logs"/>
+  		<mkdir dir="${basedir}\logs\day"/>
+  		<mkdir dir="${basedir}\logs\sql"/>
+  	    <mkdir dir="${basedir}\logs\stl"/>
+  </target>
+ 
+  <echo message ="#### COMPILE COMPLETE ####"/>
+
+    <target name="compile" depends="init">
+    <javac destdir="${basedir}\classes" srcdir="${src.dir}" optimize="true" debug="true" deprecation="true" encoding="UTF-8">
+      <classpath refid="project.classpath"/>
+    </javac>
+    <jar destfile="${lib.dir}\mono-daemon-1.0.jar"
+       basedir="${classes.dir}"  includes="**">
+      <manifest>
+        <attribute name="Built-By" value="Developer - GINAIDA"/>
+        <attribute name="Jar-Title" value="Common Library of Panworld-net"/>
+        <attribute name="Jar-Version" value="1.0.0"/>
+        <attribute name="Jar-Vendor" value="Panworld-net co.,ltd"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <echo message ="#### START COMPILE  ####"/>
+
+</project>

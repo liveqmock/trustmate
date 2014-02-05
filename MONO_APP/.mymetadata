@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MONO_APP"
+  id="myeclipse.1372230960485"
+  context-root="/MONO_APP"
+  j2ee-spec="5.0"
+  archive="MONO_APP.war">
+  <attributes>
+    <attribute name="webrootdir" value="war" />
+  </attributes>
+</project-module>
+

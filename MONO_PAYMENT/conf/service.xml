@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<panworldnet>
+	<entity class="com.pgmate.payment.conf.ServerConfigBean" name="MONO_PAYMENT">
+                <serverPort>20000</serverPort>
+                <serverTimeout>60000</serverTimeout>
+                <!-- serverMode 1 = TEST,0=REAL -->
+                <serverMode>0</serverMode>
+                <kttTestCard>3333444455556666,4444555566667777</kttTestCard>
+                <ackServer>211.43.206.249</ackServer>
+        </entity>
+        <entity class="biz.trustnet.common.db.DBConfigBean" name="DEFAULT_DB">
+            <dbType>ORACLE</dbType>
+            <poolName>MONO_PAYMENT</poolName>
+                <jdbcDriver>oracle.jdbc.driver.OracleDriver</jdbcDriver>
+                <dbUrl>jdbc:oracle:thin:@211.111.221.35:1521:ORA10R</dbUrl>
+                <dbUser>EPAYPG</dbUser>
+                <dbPassword>EPAYPG</dbPassword>
+                <connection>10</connection>
+        </entity>
+        <entity class="com.pgmate.payment.ksnet.KSNETConfigBean" name="KSNET">
+                <ip>210.181.28.137</ip>
+                <port>21001</port>
+                <timeout>30000</timeout>
+        </entity>
+        <entity class="com.pgmate.payment.inicis.INICISConfigBean" name="INICIS">
+                <homeDirectory>/EPAYPG/MONO_PAYMENT</homeDirectory>
+        </entity>
+        <entity class="com.pgmate.sms.conf.SMSConfigBean" name="SMS">
+                <serverIp>112.175.48.48</serverIp>
+                <serverPort>15000</serverPort>
+                <timeout>35000</timeout>
+                <sendTelNo>0234463730</sendTelNo>
+                <source>EPAYGEN</source>
+        </entity>
+    <entity class="com.pgmate.payment.smartro.SMARTROConfigBean" name="SMARTRO">
+		<ip>211.192.50.207</ip>
+		<port>9002</port>
+		<timeout>30000</timeout>
+	</entity>
+</panworldnet>

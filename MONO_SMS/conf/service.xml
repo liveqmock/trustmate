@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<trustnet>
+	<entity class="biz.trustnet.common.db.DBConfigBean" name="DEFAULT_DB">
+	    <dbType>ORACLE</dbType>
+	    <poolName>SMS</poolName>
+		<jdbcDriver>oracle.jdbc.driver.OracleDriver</jdbcDriver>
+		<dbUrl>jdbc:oracle:thin:@db.pgmate.com:1521:KTT</dbUrl>
+		<dbUser>trustmate</dbUser>
+		<dbPassword>dbtrustmatenet</dbPassword>
+		<connection>3</connection>
+	</entity>
+	<entity class="com.pgmate.sms.conf.SMSConfigBean" name="SMS">
+		<serverIp>112.175.48.48</serverIp>
+		<serverPort>15000</serverPort>
+		<timeout>35000</timeout>
+		<sendTelNo>0234463730</sendTelNo>
+		<source>KTT</source>
+	</entity>
+</trustnet>
